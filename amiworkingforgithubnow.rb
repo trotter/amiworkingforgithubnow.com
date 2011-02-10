@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'sinatra'
 
+mime_type :ttf, "application/octet-stream"
+mime_type :woff, "application/octet-stream"
+
 GITHUB_HANDLES = %w(
   amiridis
   atmos
@@ -32,6 +35,17 @@ get '/' do
 end
 
 post '/working' do
-  @working = GITHUB_HANDLES.include?(params[:handle])
-  erb :working
+  if GITHUB_HANDLES.include?(params[:handle])
+    erb :yes
+  else
+    erb :no
+  end
+end
+
+get '/yes' do
+  erb :yes
+end
+
+get '/no' do
+  erb :no
 end

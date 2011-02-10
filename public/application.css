@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'InterstateRegular';
+    src: url('interstate-regular-webfont.eot?') format('eot'),
+         url('interstate-regular-webfont.woff') format('woff'),
+         url('interstate-regular-webfont.ttf') format('truetype'),
+         url('interstate-regular-webfont.svg#webfontjeQgvMIS') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterstateRegular';
+    src: url('intr____-webfont.eot?') format('eot'),
+         url('intr____-webfont.woff') format('woff'),
+         url('intr____-webfont.ttf') format('truetype'),
+         url('intr____-webfont.svg#webfontm4cP3JF8') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  padding-top: 30px;
+  font-family: 'InterstateRegular';
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 48px;
+}
+ p {
+   color: #777777;
+   font-size: 24px;
+   margin: auto;
+ }
+
+p.yes {
+  width: 540px;
+}
+
+p.no {
+  width: 480px;
+}
+
+p.footer {
+  padding-top: 70px;
+  font-size: 12px;
+}
+
+a:visited, a:link, a:hover {
+  color: #777777;
+}
