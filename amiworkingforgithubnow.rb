@@ -24,6 +24,7 @@ GITHUB_HANDLES = %w(
   rtomayko
   schacon
   sr
+  tater
   tclem
   technoweenie
   tekkub
