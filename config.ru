@@ -1,2 +1,2 @@
-require './amiworkingforgithubnow'
+require './aminotworkingforgithubnow'
 run Sinatra::Application

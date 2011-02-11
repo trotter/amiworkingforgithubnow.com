@@ -36,9 +36,9 @@ end
 
 post '/working' do
   if GITHUB_HANDLES.include?(params[:handle])
-    erb :yes
-  else
     erb :no
+  else
+    erb :yes
   end
 end
 
