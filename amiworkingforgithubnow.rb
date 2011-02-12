@@ -36,7 +36,7 @@ get '/' do
 end
 
 post '/working' do
-  if GITHUB_HANDLES.include?(params[:handle])
+  if GITHUB_HANDLES.include?(params[:handle].downcase)
     erb :yes
   else
     erb :no
