@@ -13,6 +13,7 @@ GITHUB_HANDLES = %w(
   defunkt
   eston
   holman
+  joshaber
   kneath
   luckiestmonkey
   mislav
