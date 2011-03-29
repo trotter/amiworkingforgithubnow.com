@@ -11,6 +11,7 @@ GITHUB_HANDLES = %w(
   bryanveloso
   cameronmcefee
   defunkt
+  demonbane
   eston
   holman
   joshaber
@@ -26,6 +27,7 @@ GITHUB_HANDLES = %w(
   rtomayko
   schacon
   sr
+  tanoku
   tater
   tclem
   technoweenie
