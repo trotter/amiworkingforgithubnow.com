@@ -7,6 +7,7 @@ mime_type :woff, "application/octet-stream"
 GITHUB_HANDLES = %w(
   amiridis
   atmos
+  bleikamp
   brianmario
   bryanveloso
   cameronmcefee
