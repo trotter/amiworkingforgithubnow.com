@@ -14,6 +14,7 @@ GITHUB_HANDLES = %w(
   defunkt
   demonbane
   eston
+  firstdegree
   holman
   joshaber
   kevinsawicki
