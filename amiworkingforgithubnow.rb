@@ -1,48 +1,24 @@
 require 'rubygems'
 require 'sinatra'
+require 'json'
+require 'net/https'
 
 mime_type :ttf, "application/octet-stream"
 mime_type :woff, "application/octet-stream"
-
-GITHUB_HANDLES = %w(
-  amiridis
-  atmos
-  bleikamp
-  brianmario
-  bryanveloso
-  cameronmcefee
-  defunkt
-  demonbane
-  eston
-  firstdegree
-  holman
-  joshaber
-  kevinsawicki
-  kneath
-  luckiestmonkey
-  mislav
-  mojombo
-  peff
-  pjhyett
-  probablycorey
-  rodjek
-  rtomayko
-  schacon
-  sr
-  tanoku
-  tater
-  tclem
-  technoweenie
-  tekkub
-  tmm1
-)
 
 get '/' do
   erb :index
 end
 
 post '/working' do
-  if GITHUB_HANDLES.include?(params[:handle].downcase)
+  req = Net::HTTP::Get.new("/api/v2/json/user/show/#{params[:handle].downcase}/organizations")
+
+  http = Net::HTTP.new("github.com", 443)
+  http.use_ssl = true
+
+  myorgs = JSON.parse(http.request(req).body)["organizations"]
+
+  if !myorgs.select {|org| org["name"].eql?("GitHub")}.empty?
     erb :yes
   else
     erb :no
