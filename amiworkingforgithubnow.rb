@@ -18,7 +18,7 @@ post '/working' do
 
   myorgs = JSON.parse(http.request(req).body)["organizations"]
 
-  if !myorgs.select {|org| org["name"].eql?("GitHub")}.empty?
+  if myorgs.detect {|org| org["name"].eql?("GitHub")}
     erb :yes
   else
     erb :no
