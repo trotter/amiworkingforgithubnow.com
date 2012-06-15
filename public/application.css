@@ -1,0 +1,31 @@
+body {
+  padding-top: 30px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 48px;
+}
+ p {
+   color: #777777;
+   font-size: 24px;
+   margin: auto;
+ }
+
+p.yes {
+  width: 540px;
+}
+
+p.no {
+  width: 480px;
+}
+
+p.footer {
+  padding-top: 70px;
+  font-size: 12px;
+}
+
+a:visited, a:link, a:hover {
+  color: #777777;
+}
