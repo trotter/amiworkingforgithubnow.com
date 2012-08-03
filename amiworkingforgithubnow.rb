@@ -35,14 +35,14 @@ get '/no' do
 end
 
 def is_working_at_github?(handle)
-  req = Net::HTTP::Get.new("/api/v2/json/user/show/#{handle.downcase}/organizations")
+  req = Net::HTTP::Get.new("/users/#{handle.downcase}/orgs")
 
-  http = Net::HTTP.new("github.com", 443)
+  http = Net::HTTP.new("api.github.com", 443)
   http.use_ssl = true
 
-  myorgs = JSON.parse(http.request(req).body)["organizations"]
+  myorgs = JSON.parse(http.request(req).body)
 
-  if myorgs.detect {|org| org["name"].eql?("GitHub")}
+  if myorgs.detect {|org| org["login"].eql?("github")}
     return true
   else
     return false
